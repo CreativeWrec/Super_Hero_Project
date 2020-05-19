@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Superhero.Data;
+using Superhero.Models;
 
 namespace Superhero.Controllers
 {
@@ -27,7 +29,8 @@ namespace Superhero.Controllers
         // GET: Hero/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Hero hero = context.SuperHeroes.Find(id);
+            return View(hero);
         }
 
         // GET: Hero/Create
@@ -39,35 +42,44 @@ namespace Superhero.Controllers
         // POST: Hero/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create([Bind("ID, Name, AlterEgo, PrimatyAbility, SecondaryAbility, Catchphrase")] Hero hero)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                context.SuperHeroes.Add(hero);
+                context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(hero);
             }
         }
 
         // GET: Hero/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var heroesInDB = context.SuperHeroes.Where(h => h.ID == id).FirstOrDefault();
+            return View(heroesInDB);
         }
+        //context is the database
+        //superheroes is the table with the data
+        //Where is us locating a specific record in the superheroes table
+        //FirstOrDefault is selecting the first superher record in the superherores table that has the matching id
+
+      
 
         // POST: Hero/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
+        public ActionResult Edit([Bind("ID, Name, AlterEgo, PrimatyAbility, SecondaryAbility, Catchphrase")] Hero hero)
+    {
             try
             {
                 // TODO: Add update logic here
-
+                context.Entry(hero).State = EntityState.Modified;
+                context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -79,18 +91,21 @@ namespace Superhero.Controllers
         // GET: Hero/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Hero hero = context.SuperHeroes.Find(id);
+            return View(hero);
         }
 
         // POST: Hero/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Hero hero)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                hero = context.SuperHeroes.Find(id);
+                context.SuperHeroes.Remove(hero);
+                context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
