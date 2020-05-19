@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VNqbZHn1PliKwRUA5kx76Qt131fCZJifoq0klllNXC0K5E7FH1V07vjgXRqKprZU3icIQhEA0hSp22Hoz5kq7A==",
+  "dgSpecHash": "ejzmRv+ZBPJ2RA/G/Qi5PF1ey/IyRUb6hEB4ZODayYS0IIX4TTfStZz07s8kdHJklGTL9Y4PVgZDmd9art6iUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KTH\\source\\repos\\Superhero\\Superhero\\Superhero.csproj",
+  "projectFilePath": "C:\\Users\\KTH\\Documents\\DevCodeCamp\\Projects\\Superhero\\Superhero\\Superhero.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KTH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\KTH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",

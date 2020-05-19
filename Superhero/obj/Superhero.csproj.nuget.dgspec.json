@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KTH\\source\\repos\\Superhero\\Superhero\\Superhero.csproj": {}
+    "C:\\Users\\KTH\\Documents\\DevCodeCamp\\Projects\\Superhero\\Superhero\\Superhero.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KTH\\source\\repos\\Superhero\\Superhero\\Superhero.csproj": {
+    "C:\\Users\\KTH\\Documents\\DevCodeCamp\\Projects\\Superhero\\Superhero\\Superhero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KTH\\source\\repos\\Superhero\\Superhero\\Superhero.csproj",
+        "projectUniqueName": "C:\\Users\\KTH\\Documents\\DevCodeCamp\\Projects\\Superhero\\Superhero\\Superhero.csproj",
         "projectName": "Superhero",
-        "projectPath": "C:\\Users\\KTH\\source\\repos\\Superhero\\Superhero\\Superhero.csproj",
+        "projectPath": "C:\\Users\\KTH\\Documents\\DevCodeCamp\\Projects\\Superhero\\Superhero\\Superhero.csproj",
         "packagesPath": "C:\\Users\\KTH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KTH\\source\\repos\\Superhero\\Superhero\\obj\\",
+        "outputPath": "C:\\Users\\KTH\\Documents\\DevCodeCamp\\Projects\\Superhero\\Superhero\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -12,15 +12,16 @@ namespace Superhero.Controllers
     {
         private ApplicationDbContext context;
 
-        public HeroController()
+        public HeroController(ApplicationDbContext _context)
         {
-            context = new ApplicationDbContext();
+            context = _context;
         }
             
         // GET: Hero
         public ActionResult Index()
         {
-            return View();
+            var heroes = context.SuperHeroes.ToList();
+            return View(heroes);
         }
 
         // GET: Hero/Details/5
